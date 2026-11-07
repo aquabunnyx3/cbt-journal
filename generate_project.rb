@@ -6,9 +6,11 @@ group = project.main_group.new_group('Thoughtdrift', 'Thoughtdrift')
 Dir['Thoughtdrift/*.swift'].sort.each do |f|
   target.add_file_references([group.new_file(File.basename(f))])
 end
+target.add_resources([group.new_file('Assets.xcassets')])
 target.build_configurations.each do |c|
   s = c.build_settings
-  s['PRODUCT_BUNDLE_IDENTIFIER'] = 'com.thoughtdrift.app'
+  s['PRODUCT_BUNDLE_IDENTIFIER'] = 'com.aquabunnygames.thoughtdrift'
+  s['INFOPLIST_KEY_ITSAppUsesNonExemptEncryption'] = 'NO'
   s['SWIFT_VERSION'] = '5.0'
   s['GENERATE_INFOPLIST_FILE'] = 'YES'
   s['INFOPLIST_KEY_UILaunchScreen_Generation'] = 'YES'
