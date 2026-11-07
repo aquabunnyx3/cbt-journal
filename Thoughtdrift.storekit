@@ -1,0 +1,33 @@
+{
+  "identifier" : "6B1E2C1A",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6831882370",
+      "localizations" : [
+        {
+          "description" : "Unlock all 30 days of the CBT journaling program.",
+          "displayName" : "Full Program",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.aquabunnygames.thoughtdrift.fullprogram",
+      "referenceName" : "Full Program",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

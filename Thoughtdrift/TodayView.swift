@@ -2,12 +2,32 @@ import SwiftUI
 
 struct TodayView: View {
     @EnvironmentObject var store: JournalStore
+    @EnvironmentObject var purchases: PurchaseManager
 
     var body: some View {
         NavigationStack {
-            DayEntryView(day: Program.days[store.currentDay - 1], showsTitleBar: false)
+            content
                 .navigationTitle("Today")
                 .navigationBarTitleDisplayMode(.inline)
+                .animation(.easeInOut(duration: 0.35), value: store.finishedTodaysPrompt)
+        }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        if store.finishedTodaysPrompt {
+            // Today's prompt is saved: show the daily home screen.
+            DailyHomeView(day: Program.days[(store.dayCompletedToday ?? Program.days.count) - 1])
+                .id(JournalStore.key(for: Date()))
+                .transition(.opacity)
+        } else if purchases.requiresPurchase(store.currentDay) {
+            // Free days are used up: keep mood + gratitude available, offer the unlock.
+            DailyHomeView(day: Program.days[max(store.currentDay - 2, 0)], nextNeedsPurchase: true)
+                .id(JournalStore.key(for: Date()))
+        } else {
+            DayEntryView(day: Program.days[store.currentDay - 1], showsTitleBar: false)
+                .id(store.currentDay)
+                .transition(.opacity)
         }
     }
 }

@@ -37,6 +37,8 @@ struct CheatSheetView: View {
 
 struct SettingsView: View {
     @EnvironmentObject var store: JournalStore
+    @EnvironmentObject var purchases: PurchaseManager
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack {
@@ -45,6 +47,17 @@ struct SettingsView: View {
                     Toggle("Remind me", isOn: $store.remindersEnabled)
                     if store.remindersEnabled {
                         DatePicker("Time", selection: $store.reminderTime, displayedComponents: .hourAndMinute)
+                    }
+                }
+                Section("Full program") {
+                    if purchases.hasFullAccess {
+                        Label("All 30 days unlocked", systemImage: "checkmark.seal.fill")
+                            .foregroundStyle(Theme.sage)
+                    } else {
+                        Button("Unlock all 30 days") { showPaywall = true }
+                    }
+                    Button("Restore Purchases") {
+                        Task { await purchases.restore() }
                     }
                 }
                 Section("Privacy") {
@@ -60,6 +73,15 @@ struct SettingsView: View {
             .scrollContentBackground(.hidden)
             .calmBackground()
             .navigationTitle("Settings")
+            .sheet(isPresented: $showPaywall) { PaywallView().environmentObject(purchases) }
+            .alert("Purchase", isPresented: Binding(
+                get: { purchases.errorMessage != nil && !showPaywall },
+                set: { if !$0 { purchases.errorMessage = nil } }
+            )) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text(purchases.errorMessage ?? "")
+            }
             .task(id: store.remindersEnabled) { await store.updateReminders() }
             .onChange(of: store.reminderTime) { _ in Task { await store.updateReminders() } }
         }

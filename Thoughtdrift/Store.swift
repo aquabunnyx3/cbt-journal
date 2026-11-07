@@ -4,6 +4,10 @@ import UserNotifications
 @MainActor
 final class JournalStore: ObservableObject {
     @Published private(set) var entries: [Int: String] = [:]
+    /// When each day's prompt was first completed. Drives the one-prompt-per-day unlock.
+    @Published private(set) var completedOn: [Int: Date] = [:]
+    /// Mood and gratitude, keyed by calendar date ("yyyy-MM-dd").
+    @Published private(set) var checkIns: [String: DailyCheckIn] = [:]
     @Published var hasOnboarded: Bool {
         didSet { defaults.set(hasOnboarded, forKey: "hasOnboarded") }
     }
@@ -16,10 +20,14 @@ final class JournalStore: ObservableObject {
 
     private let defaults = UserDefaults.standard
     private let fileURL: URL
+    private let datesURL: URL
+    private let checkInsURL: URL
 
     init() {
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         fileURL = dir.appendingPathComponent("entries.json")
+        datesURL = dir.appendingPathComponent("completed.json")
+        checkInsURL = dir.appendingPathComponent("checkins.json")
         hasOnboarded = defaults.bool(forKey: "hasOnboarded")
         remindersEnabled = defaults.bool(forKey: "remindersEnabled")
         reminderTime = defaults.object(forKey: "reminderTime") as? Date
@@ -27,6 +35,18 @@ final class JournalStore: ObservableObject {
         if let data = try? Data(contentsOf: fileURL),
            let decoded = try? JSONDecoder().decode([Int: String].self, from: data) {
             entries = decoded
+        }
+        if let data = try? Data(contentsOf: datesURL),
+           let decoded = try? JSONDecoder().decode([Int: Date].self, from: data) {
+            completedOn = decoded
+        }
+        if let data = try? Data(contentsOf: checkInsURL),
+           let decoded = try? JSONDecoder().decode([String: DailyCheckIn].self, from: data) {
+            checkIns = decoded
+        }
+        // Refresh the Today tab when the date rolls over so the next prompt appears.
+        NotificationCenter.default.addObserver(forName: .NSCalendarDayChanged, object: nil, queue: .main) { [weak self] _ in
+            Task { @MainActor in self?.objectWillChange.send() }
         }
     }
 
@@ -41,7 +61,19 @@ final class JournalStore: ObservableObject {
     // First day without an entry, so missed days never need catching up.
     var currentDay: Int { Program.days.first { !isComplete($0.id) }?.id ?? 30 }
 
-    func isUnlocked(_ day: Int) -> Bool { day <= currentDay || isComplete(day) }
+    var allComplete: Bool { completedCount == Program.days.count }
+
+    /// The prompt finished today, if any. Only one new prompt unlocks per calendar day.
+    var dayCompletedToday: Int? {
+        completedOn.filter { isComplete($0.key) && Calendar.current.isDateInToday($0.value) }.keys.max()
+    }
+
+    var finishedTodaysPrompt: Bool { dayCompletedToday != nil || allComplete }
+
+    /// Unlocked by time: finished days, plus the next prompt if none was finished today.
+    func isUnlocked(_ day: Int) -> Bool {
+        isComplete(day) || (day == currentDay && dayCompletedToday == nil)
+    }
 
     func weekComplete(_ week: Int) -> Bool {
         let range = ((week - 1) * 7 + 1)...min(week * 7, 30)
@@ -50,8 +82,34 @@ final class JournalStore: ObservableObject {
 
     func save(_ text: String, for day: Int) {
         entries[day] = text
-        if let data = try? JSONEncoder().encode(entries) {
-            try? data.write(to: fileURL, options: [.atomic, .completeFileProtection])
+        write(entries, to: fileURL)
+        if isComplete(day), completedOn[day] == nil {
+            completedOn[day] = Date()
+            write(completedOn, to: datesURL)
+        }
+    }
+
+    // MARK: Daily check-in (mood + gratitude)
+
+    static func key(for date: Date) -> String {
+        let c = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
+    }
+
+    var todaysCheckIn: DailyCheckIn {
+        var checkIn = checkIns[Self.key(for: Date())] ?? DailyCheckIn()
+        while checkIn.gratitude.count < 3 { checkIn.gratitude.append("") }
+        return checkIn
+    }
+
+    func saveTodaysCheckIn(_ checkIn: DailyCheckIn) {
+        checkIns[Self.key(for: Date())] = checkIn
+        write(checkIns, to: checkInsURL)
+    }
+
+    private func write<T: Encodable>(_ value: T, to url: URL) {
+        if let data = try? JSONEncoder().encode(value) {
+            try? data.write(to: url, options: [.atomic, .completeFileProtection])
         }
     }
 
@@ -71,6 +129,12 @@ final class JournalStore: ObservableObject {
         let trigger = UNCalendarNotificationTrigger(dateMatching: parts, repeats: true)
         try? await center.add(UNNotificationRequest(identifier: "daily", content: content, trigger: trigger))
     }
+}
+
+struct DailyCheckIn: Codable, Equatable {
+    /// 1 (rough) to 5 (great); nil until the user picks one.
+    var mood: Int?
+    var gratitude: [String] = ["", "", ""]
 }
 
 enum Reminders {

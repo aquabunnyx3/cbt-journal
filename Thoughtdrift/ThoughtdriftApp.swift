@@ -3,6 +3,8 @@ import SwiftUI
 @main
 struct ThoughtdriftApp: App {
     @StateObject private var store = JournalStore()
+    @StateObject private var purchases = PurchaseManager()
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -14,7 +16,15 @@ struct ThoughtdriftApp: App {
                 }
             }
             .environmentObject(store)
+            .environmentObject(purchases)
             .tint(Theme.sage)
+            .onChange(of: scenePhase) { phase in
+                // Re-check the date (new prompt) and purchases when returning to the app.
+                if phase == .active {
+                    store.objectWillChange.send()
+                    Task { await purchases.refreshEntitlements() }
+                }
+            }
         }
     }
 }
