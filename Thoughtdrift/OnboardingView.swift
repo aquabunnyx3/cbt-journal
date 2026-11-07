@@ -22,6 +22,7 @@ struct OnboardingView: View {
                 }
             }
             .buttonStyle(PrimaryButtonStyle())
+            .readableWidth(560)
             .padding(.horizontal, 24)
             .padding(.bottom, 24)
         }
@@ -46,7 +47,7 @@ struct OnboardingView: View {
             }
             .padding(.horizontal, 28)
             .padding(.bottom, 48)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .readableWidth(560)
         }
     }
 

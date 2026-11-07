@@ -4,20 +4,22 @@ struct CheatSheetView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 14) {
-                    ForEach(Program.distortions) { item in
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text(item.name)
-                                .font(.calm(.headline))
-                                .foregroundStyle(Theme.ink)
-                            Text(item.example)
-                                .font(.calm(.subheadline))
-                                .foregroundStyle(Theme.muted)
-                            Label(item.reframe, systemImage: "arrow.turn.down.right")
-                                .font(.calm(.subheadline, weight: .medium))
-                                .foregroundStyle(Theme.sage)
+                VStack(spacing: 20) {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 320), spacing: 14, alignment: .top)], spacing: 14) {
+                        ForEach(Program.distortions) { item in
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text(item.name)
+                                    .font(.calm(.headline))
+                                    .foregroundStyle(Theme.ink)
+                                Text(item.example)
+                                    .font(.calm(.subheadline))
+                                    .foregroundStyle(Theme.muted)
+                                Label(item.reframe, systemImage: "arrow.turn.down.right")
+                                    .font(.calm(.subheadline, weight: .medium))
+                                    .foregroundStyle(Theme.sage)
+                            }
+                            .card()
                         }
-                        .card()
                     }
                     Text("Pro tip: Don't try to fix every distortion at once. Pick the one that shows up most often and practice catching it for a week.")
                         .font(.calm(.footnote))
@@ -25,6 +27,7 @@ struct CheatSheetView: View {
                         .padding(.horizontal, 8)
                 }
                 .padding(20)
+                .readableWidth(1000)
             }
             .calmBackground()
             .navigationTitle("Distortions")

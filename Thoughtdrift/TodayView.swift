@@ -86,6 +86,7 @@ struct DayEntryView: View {
                 }
             }
             .padding(20)
+            .readableWidth()
         }
         .scrollDismissesKeyboard(.interactively)
         .calmBackground()

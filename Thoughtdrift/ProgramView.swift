@@ -8,11 +8,14 @@ struct ProgramView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     progress
-                    ForEach(Program.weeks) { week in
-                        weekSection(week)
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 340), spacing: 24, alignment: .top)], spacing: 24) {
+                        ForEach(Program.weeks) { week in
+                            weekSection(week)
+                        }
                     }
                 }
                 .padding(20)
+                .readableWidth(1000)
             }
             .calmBackground()
             .navigationTitle("Program")
@@ -127,6 +130,7 @@ struct CheckInView: View {
                     .background(Theme.card, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
             }
             .padding(20)
+            .readableWidth()
         }
         .scrollDismissesKeyboard(.interactively)
         .calmBackground()

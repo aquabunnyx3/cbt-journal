@@ -44,6 +44,10 @@ struct CardModifier: ViewModifier {
 
 extension View {
     func card() -> some View { modifier(CardModifier()) }
+    // Keeps text comfortably narrow on the unfolded inner display.
+    func readableWidth(_ width: CGFloat = 680) -> some View {
+        frame(maxWidth: width).frame(maxWidth: .infinity)
+    }
     func calmBackground() -> some View {
         background(Theme.background.ignoresSafeArea())
     }

@@ -7,101 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AAE8DEE53D3E7F55C4509B /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C164409EA6CF2BD84825E /* Program.swift */; };
-		244073FA5E85A4F39C0E8812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADD05355D376586EA46D956 /* Foundation.framework */; };
-		3F525929F1D17F9B21738EB2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FA465559D8D2DB6C15E9D /* Store.swift */; };
-		8C78898303D184A517D1FCC8 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D41748652BB18CC0F38026C /* TodayView.swift */; };
-		CC0EE7CB9412BAFA5CD3F9CA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999AFF9FAA1F918253E7FCC4 /* Theme.swift */; };
-		D2F7E62E5398F7B78AD2506F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F820CCF2C3633F2565C29EA /* OnboardingView.swift */; };
-		DF7690A9E4096A7784815104 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1B064BF5AADC942E989004 /* SettingsViews.swift */; };
-		E0E0EF8051DE9E4CE3977452 /* ThoughtdriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5227FDD62C851966910D95 /* ThoughtdriftApp.swift */; };
-		F17CE90BB8E9E239C9314755 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3F1316BDBA506874D48870 /* ProgramView.swift */; };
+		1597E696A323E0B6A76DBCC4 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72788DBACF7BFA694233AEF3 /* Program.swift */; };
+		1DA49BE40F8CB63AA80928F4 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CBA641B4CF815C14A609A /* ProgramView.swift */; };
+		23D9BD654BF6EC82F62855C8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A256B76EFEAD0163369A9 /* Store.swift */; };
+		3102F1B0ECF7836A9626162E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97EE1BE7281162B8F06738 /* Foundation.framework */; };
+		54C7088F4A2562C40EE7F2EA /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E5CDE9702CA698027C1D8 /* TodayView.swift */; };
+		8D589D44DD47446E6F96CEA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D404F1948972A8395DF2 /* OnboardingView.swift */; };
+		C6795012A5C94A482E0C653F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F33FC559345CA5752664E /* Theme.swift */; };
+		F7A97DFBF3FB323AFCAACB86 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB8CB5C2E7C0E521C6CBCA /* SettingsViews.swift */; };
+		FB780DBCF9367D30154BF5DB /* ThoughtdriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E031671747B40CEDD80967 /* ThoughtdriftApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		015C164409EA6CF2BD84825E /* Program.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
-		0A5227FDD62C851966910D95 /* ThoughtdriftApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThoughtdriftApp.swift; sourceTree = "<group>"; };
-		2B1FA465559D8D2DB6C15E9D /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		6D41748652BB18CC0F38026C /* TodayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
-		999AFF9FAA1F918253E7FCC4 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		9ADD05355D376586EA46D956 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9F820CCF2C3633F2565C29EA /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		AA3F1316BDBA506874D48870 /* ProgramView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
-		AD1B064BF5AADC942E989004 /* SettingsViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
-		F62C436B4B35EBCAACBD9069 /* Thoughtdrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughtdrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E031671747B40CEDD80967 /* ThoughtdriftApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThoughtdriftApp.swift; sourceTree = "<group>"; };
+		0A5C49E192003865F789E921 /* Thoughtdrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughtdrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182CBA641B4CF815C14A609A /* ProgramView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		39AB8CB5C2E7C0E521C6CBCA /* SettingsViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
+		3A97EE1BE7281162B8F06738 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5545D404F1948972A8395DF2 /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		72788DBACF7BFA694233AEF3 /* Program.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		A91F33FC559345CA5752664E /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B64E5CDE9702CA698027C1D8 /* TodayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		C55A256B76EFEAD0163369A9 /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5F340523F7A7A771F2B7929 /* Frameworks */ = {
+		7997C8551815CAD27927C450 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244073FA5E85A4F39C0E8812 /* Foundation.framework in Frameworks */,
+				3102F1B0ECF7836A9626162E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22EAF82E6A8D371203D124A1 /* Products */ = {
+		0F8D8EA6E19D225DF23C0F15 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F62C436B4B35EBCAACBD9069 /* Thoughtdrift.app */,
+				3A97EE1BE7281162B8F06738 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5C4B56E84776013CC01C930E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A5C49E192003865F789E921 /* Thoughtdrift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2AC8E4BEF8205C3617417526 = {
+		6421C7FF858DA70940AE80C8 = {
 			isa = PBXGroup;
 			children = (
-				22EAF82E6A8D371203D124A1 /* Products */,
-				8F3834C4DBED877420299413 /* Frameworks */,
-				439F92D450114992E72D984E /* Thoughtdrift */,
+				5C4B56E84776013CC01C930E /* Products */,
+				F47250A619F84B8497DB85AC /* Frameworks */,
+				F6FFF55EA655EA1AB676DEC0 /* Thoughtdrift */,
 			);
 			sourceTree = "<group>";
 		};
-		439F92D450114992E72D984E /* Thoughtdrift */ = {
+		F47250A619F84B8497DB85AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F820CCF2C3633F2565C29EA /* OnboardingView.swift */,
-				015C164409EA6CF2BD84825E /* Program.swift */,
-				AA3F1316BDBA506874D48870 /* ProgramView.swift */,
-				AD1B064BF5AADC942E989004 /* SettingsViews.swift */,
-				2B1FA465559D8D2DB6C15E9D /* Store.swift */,
-				999AFF9FAA1F918253E7FCC4 /* Theme.swift */,
-				0A5227FDD62C851966910D95 /* ThoughtdriftApp.swift */,
-				6D41748652BB18CC0F38026C /* TodayView.swift */,
+				0F8D8EA6E19D225DF23C0F15 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6FFF55EA655EA1AB676DEC0 /* Thoughtdrift */ = {
+			isa = PBXGroup;
+			children = (
+				5545D404F1948972A8395DF2 /* OnboardingView.swift */,
+				72788DBACF7BFA694233AEF3 /* Program.swift */,
+				182CBA641B4CF815C14A609A /* ProgramView.swift */,
+				39AB8CB5C2E7C0E521C6CBCA /* SettingsViews.swift */,
+				C55A256B76EFEAD0163369A9 /* Store.swift */,
+				A91F33FC559345CA5752664E /* Theme.swift */,
+				04E031671747B40CEDD80967 /* ThoughtdriftApp.swift */,
+				B64E5CDE9702CA698027C1D8 /* TodayView.swift */,
 			);
 			name = Thoughtdrift;
 			path = Thoughtdrift;
 			sourceTree = "<group>";
 		};
-		536DA98B382DD4FEDB3B9848 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9ADD05355D376586EA46D956 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		8F3834C4DBED877420299413 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				536DA98B382DD4FEDB3B9848 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C97EC00D9549A27CA093E91E /* Thoughtdrift */ = {
+		419AA3A15A2421B50C4B7598 /* Thoughtdrift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7880AF7157888D1C5DDBAEB4 /* Build configuration list for PBXNativeTarget "Thoughtdrift" */;
+			buildConfigurationList = 90AD1FAC8B363CFEFF40884C /* Build configuration list for PBXNativeTarget "Thoughtdrift" */;
 			buildPhases = (
-				C7247360D209502A90CD99EF /* Sources */,
-				A5F340523F7A7A771F2B7929 /* Frameworks */,
-				F7E0DEA3EB37AA0B2B7E0DC0 /* Resources */,
+				A1170232E81264214A9E61F4 /* Sources */,
+				7997C8551815CAD27927C450 /* Frameworks */,
+				D69335D1915207BB694827D2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -109,19 +109,19 @@
 			);
 			name = Thoughtdrift;
 			productName = Thoughtdrift;
-			productReference = F62C436B4B35EBCAACBD9069 /* Thoughtdrift.app */;
+			productReference = 0A5C49E192003865F789E921 /* Thoughtdrift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E77C7620EC1BDF822FD7B0CB /* Project object */ = {
+		1B08CE0798BA61C52AE1C2F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = C8A092DFB8C8FB4CEFC814FE /* Build configuration list for PBXProject "Thoughtdrift" */;
+			buildConfigurationList = CA96282EC1241EC6E7C43A64 /* Build configuration list for PBXProject "Thoughtdrift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,20 +129,20 @@
 				en,
 				Base,
 			);
-			mainGroup = 2AC8E4BEF8205C3617417526;
+			mainGroup = 6421C7FF858DA70940AE80C8;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 100;
-			productRefGroup = 22EAF82E6A8D371203D124A1 /* Products */;
+			productRefGroup = 5C4B56E84776013CC01C930E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C97EC00D9549A27CA093E91E /* Thoughtdrift */,
+				419AA3A15A2421B50C4B7598 /* Thoughtdrift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F7E0DEA3EB37AA0B2B7E0DC0 /* Resources */ = {
+		D69335D1915207BB694827D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,25 +152,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C7247360D209502A90CD99EF /* Sources */ = {
+		A1170232E81264214A9E61F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F7E62E5398F7B78AD2506F /* OnboardingView.swift in Sources */,
-				03AAE8DEE53D3E7F55C4509B /* Program.swift in Sources */,
-				F17CE90BB8E9E239C9314755 /* ProgramView.swift in Sources */,
-				DF7690A9E4096A7784815104 /* SettingsViews.swift in Sources */,
-				3F525929F1D17F9B21738EB2 /* Store.swift in Sources */,
-				CC0EE7CB9412BAFA5CD3F9CA /* Theme.swift in Sources */,
-				E0E0EF8051DE9E4CE3977452 /* ThoughtdriftApp.swift in Sources */,
-				8C78898303D184A517D1FCC8 /* TodayView.swift in Sources */,
+				8D589D44DD47446E6F96CEA9 /* OnboardingView.swift in Sources */,
+				1597E696A323E0B6A76DBCC4 /* Program.swift in Sources */,
+				1DA49BE40F8CB63AA80928F4 /* ProgramView.swift in Sources */,
+				F7A97DFBF3FB323AFCAACB86 /* SettingsViews.swift in Sources */,
+				23D9BD654BF6EC82F62855C8 /* Store.swift in Sources */,
+				C6795012A5C94A482E0C653F /* Theme.swift in Sources */,
+				FB780DBCF9367D30154BF5DB /* ThoughtdriftApp.swift in Sources */,
+				54C7088F4A2562C40EE7F2EA /* TodayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		12EF98EEF74C0497274E7B32 /* Debug */ = {
+		744A66C3D1FCE1C23342053E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -179,7 +179,88 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Thoughtdrift;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtdrift.app;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75017A7C86D3CE631C0EF226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		879157E4F2B3DCEFF686B880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Thoughtdrift;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
@@ -190,7 +271,7 @@
 			};
 			name = Debug;
 		};
-		27A1EBE6335FBEAE25CFE200 /* Debug */ = {
+		BE4C3A17A6FCAD71899CC04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,103 +332,28 @@
 			};
 			name = Debug;
 		};
-		666D6FD55AE1BCD86ECCCBB8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Thoughtdrift;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtdrift.app;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9D532091087C2ED6A84D69A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7880AF7157888D1C5DDBAEB4 /* Build configuration list for PBXNativeTarget "Thoughtdrift" */ = {
+		90AD1FAC8B363CFEFF40884C /* Build configuration list for PBXNativeTarget "Thoughtdrift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				666D6FD55AE1BCD86ECCCBB8 /* Release */,
-				12EF98EEF74C0497274E7B32 /* Debug */,
+				744A66C3D1FCE1C23342053E /* Release */,
+				879157E4F2B3DCEFF686B880 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8A092DFB8C8FB4CEFC814FE /* Build configuration list for PBXProject "Thoughtdrift" */ = {
+		CA96282EC1241EC6E7C43A64 /* Build configuration list for PBXProject "Thoughtdrift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27A1EBE6335FBEAE25CFE200 /* Debug */,
-				9D532091087C2ED6A84D69A1 /* Release */,
+				BE4C3A17A6FCAD71899CC04E /* Debug */,
+				75017A7C86D3CE631C0EF226 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E77C7620EC1BDF822FD7B0CB /* Project object */;
+	rootObject = 1B08CE0798BA61C52AE1C2F4 /* Project object */;
 }

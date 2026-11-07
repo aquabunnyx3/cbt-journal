@@ -13,6 +13,10 @@ target.build_configurations.each do |c|
   s['GENERATE_INFOPLIST_FILE'] = 'YES'
   s['INFOPLIST_KEY_UILaunchScreen_Generation'] = 'YES'
   s['INFOPLIST_KEY_CFBundleDisplayName'] = 'Thoughtdrift'
+  # No fixed orientation or full-screen lock, so the window can resize freely on fold/unfold.
+  s['INFOPLIST_KEY_UISupportedInterfaceOrientations'] = 'UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight'
+  s['INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad'] = s['INFOPLIST_KEY_UISupportedInterfaceOrientations']
+  s['INFOPLIST_KEY_UIApplicationSceneManifest_Generation'] = 'YES'
   s['TARGETED_DEVICE_FAMILY'] = '1,2'
   s['MARKETING_VERSION'] = '1.0'
   s['CURRENT_PROJECT_VERSION'] = '1'
